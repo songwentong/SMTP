@@ -95,3 +95,29 @@ class SMTPSClient: NSObject, StreamDelegate {
 
 let client = SMTPSClient()
 client.connect()
+
+///账户
+class SMTPAccount:NSObject {
+    var email: String
+    var password: String
+
+    init(email: String, password: String) {
+        self.email = email
+        self.password = password
+    }
+}
+
+///邮件
+class Mail:NSObject {
+    var subject: String
+    var body: String
+    var to: String
+    var from: String
+
+    init(subject: String, body: String, to: String, from: String) {
+        self.subject = subject
+        self.body = body
+        self.to = to
+        self.from = from
+    }
+}
